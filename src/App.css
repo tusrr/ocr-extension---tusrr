@@ -1,38 +1,85 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #37474f;
+  color: #fff;
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  color: #ffc107;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App p {
+  color: #b0bec5;
+  font-size: 1.2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input-wrapper {
+  position: relative;
+  margin-top: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.input-wrapper label {
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: #ff5722;
+  color: #fff;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.input-wrapper input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  font-size: 15px;
+  color: #1a1a11;
+}
+
+.result {
+  margin-top: 4rem;
+  display: grid;
+  grid-gap: 20px;
+}
+
+.result .box-image,
+.result .box-p {
+  flex: 1;
+  padding: 2rem;
+}
+
+.result .box-image {
+  background: #2196f3;
+}
+
+.result .box-p {
+  background: #4caf50;
+}
+
+.result img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.result p {
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 1000px) {
+  .result {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
